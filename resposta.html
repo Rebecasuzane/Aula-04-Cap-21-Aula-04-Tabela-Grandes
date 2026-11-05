@@ -202,11 +202,15 @@
     let total = 0;
 
     populacoes.forEach(function (celula) {
+    
+        let valor = parseInt(celula.textContent.replace(/\./g, ""), 10);
         
+        if (!isNaN(valor)) {
+            total += valor;
+        }
     });
 
-    document.getElementById("total").textContent =
-        total.toLocaleString("pt-BR");
+    document.getElementById("total").textContent = total.toLocaleString("pt-BR");
 </script>
 
 </body>
